@@ -39,6 +39,19 @@ binary_sensor:
     on_press:
       then:
         - logger.log: "Sound Sensor triggered"
+        - switch.turn_on: remote433
+switch:
+  - platform: gpio
+    pin:
+      number: 21
+      mode:
+        output: true
+    id: remote433
+    name: "Wireless Doorbell Remote"
+    icon: "mdi:doorbell"
+    on_turn_on:
+      - delay: 400ms
+      - switch.turn_off: remote433
 light:
   - platform: status_led
     name: "Status LED"
