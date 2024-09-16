@@ -25,6 +25,11 @@ captive_portal:
 # Example configuration entry
 web_server:
   port: 80
+globals:
+  - id: remote433_hold_time_ms
+    type: int
+    initial_value: "1000"
+    restore_value: true
 binary_sensor:
   - platform: gpio
     pin:
@@ -50,7 +55,7 @@ switch:
     name: "Wireless Doorbell Remote"
     icon: "mdi:doorbell"
     on_turn_on:
-      - delay: 400ms
+      - delay: !lambda "return id(remote433_hold_time_ms);"
       - switch.turn_off: remote433
 light:
   - platform: status_led
