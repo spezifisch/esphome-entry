@@ -10,6 +10,7 @@ esp32:
     type: arduino
     # Enable logging
 logger:
+  level: debug
 # Enable Home Assistant API
 api:
 ota:
@@ -24,21 +25,20 @@ captive_portal:
 # Example configuration entry
 web_server:
   port: 80
-globals:
-  - id: esphome_sensitivity
-    type: float
-    initial_value: '36.5'
-    restore_value: yes
-  - id: esphome_volume
-    type: int
 binary_sensor:
   - platform: gpio
     pin:
-      number: 3
+      number: 9
+      # pin is low when comparator is triggered
+      inverted: true
       mode:
         input: true
         pullup: false
     id: sound_sensor
+    icon: "mdi:bell-ring"
+    on_press:
+      then:
+        - logger.log: "Sound Sensor triggered"
 light:
   - platform: status_led
     name: "Status LED"
