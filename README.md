@@ -8,7 +8,7 @@ A custom box to detect when someone rings on my analog doorbell.
 
 We're using one of these sound sensors which use an LM393 comparator for threshold detection:
 
-![PCB layout of the sound sensor](./docs/sound sensor.png)
+![PCB layout of the sound sensors](docs/sound sensor.png)
 
 ## Building the Software
 
