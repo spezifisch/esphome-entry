@@ -3,46 +3,34 @@ esphome:
   friendly_name: SoundSensor
   platformio_options:
     board_build.flash_mode: dio
-
 esp32:
   board: esp32-c3-devkitm-1
   variant: ESP32C3
   framework:
     type: arduino
-
 # Enable logging
 logger:
-
 # Enable Home Assistant API
 api:
-
 ota:
   platform: esphome
-
 wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "skynet-subsidiary_001"
     password: !secret ota
-
 improv_serial:
-
 captive_portal:
-
 # Example configuration entry
 web_server:
   port: 80
-
 globals:
-
   - id: esphome_sensitivity
     type: float
     initial_value: '36.5'
     restore_value: yes
-
   - id: esphome_volume
     type: int
-
 sensor:
   - platform: adc
     pin: 3
@@ -56,8 +44,8 @@ sensor:
     filters:
       - lambda: |-
           unsigned int sample;
-          unsigned long startMillis= millis(); 
-          float peakToPeak = 0; 
+          unsigned long startMillis= millis();
+          float peakToPeak = 0;
           unsigned int signalMax = 0;
           unsigned int signalMin = 1024;
           while (millis() - startMillis < 500) {
@@ -73,23 +61,20 @@ sensor:
           }
           peakToPeak = map((signalMax - signalMin),1,1024,1.5,1024);
           id(esphome_volume) = peakToPeak;
-          float state = id(esphome_sensitivity)*log10(peakToPeak)+15;  
+          float state = id(esphome_sensitivity)*log10(peakToPeak)+15;
           return(state);
-
   - platform: template
     name: "Volume SoundEsp"
     icon: "mdi:volume-high"
     unit_of_measurement: "%"
     update_interval: 2s
     lambda: return(map((id(esphome_db).state),15,150,0,100));
-
   - platform: template
     name: "RAW SoundEsp"
     icon: "mdi:volume-source"
     unit_of_measurement: "%"
     update_interval: 2s
     lambda: return(map(id(esphome_volume),1,1024,0,100));
-
 number:
   - platform: template
     id: sensitivity_slider
@@ -103,8 +88,7 @@ number:
     mode: slider
     set_action:
       then:
-        - lambda:  id(esphome_sensitivity) = x;
-
+        - lambda: id(esphome_sensitivity) = x;
 light:
   - platform: status_led
     name: "Status LED"
@@ -114,4 +98,3 @@ light:
       number: GPIO8
       inverted: true
     restore_mode: ALWAYS_OFF
-
