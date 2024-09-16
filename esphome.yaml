@@ -17,8 +17,8 @@ ota:
 wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "skynet-subsidiary_001"
-    password: !secret ota
+    ssid: !secret fallback_ssid
+    password: !secret fallback_password
 improv_serial:
 captive_portal:
 # Example configuration entry
