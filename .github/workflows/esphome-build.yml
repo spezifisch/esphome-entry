@@ -22,8 +22,8 @@ jobs:
           path: github-build*/*
   release:
     if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
     runs-on: ubuntu-latest
-    depends-on: build
     steps:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v4
