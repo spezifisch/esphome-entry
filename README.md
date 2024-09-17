@@ -57,7 +57,7 @@ $ esphome run esphome.yaml
 
 ## Configuration
 
-For initial configuration, you can use the fallback WiFi AP, improv_serial, or just hard-code your WiFi.
+For initial configuration, you can use the fallback WiFi AP, [improv_serial](https://esphome.io/components/improv_serial), or just hard-code your WiFi based on `secrets.default.yaml`.
 
 ### Fallback AP
 
