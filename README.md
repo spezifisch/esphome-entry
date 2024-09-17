@@ -55,19 +55,19 @@ $ vim ./secrets.yaml
 $ esphome run esphome.yaml
 ```
 
-### Configuration
+## Configuration
 
 For initial configuration, you can use the fallback WiFi AP, improv_serial, or just hard-code your WiFi.
 
-#### Fallback AP
+### Fallback AP
 
 You can connect to the fallback AP configured in `secrets.yaml` and set your proper WiFi credentials using the Web UI at port 80 of the gateway IP that you get via DHCP when connecting.
 
-#### HomeAssistant
+### HomeAssistant
 
 This is plug & play with ESPHome's HomeAssistant integration. If the sensor is not auto-detected, just lookup its IP (e.g. from your router) and configure it manually.
 
-### Development
+## Development
 
 ```console
 # install pre-commit python package
@@ -84,7 +84,7 @@ $ pre-commit run --all-files
 
 * If your doorbell remote isn't triggered reliably, play with the `switch.on_turn_on` delay parameter to vary how long the button is "pressed".
 
-## License
+## Licenses
 
 Schematics: CERN-OHL-S-2.0
 
