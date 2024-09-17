@@ -23,12 +23,13 @@ We're using one of these sound sensors which use an LM393 comparator for thresho
 
 ![PCB layout of the sound sensors](./docs/sound%20sensor.png)
 
-Reverse-engineered schematic from that:
+Reverse-engineered schematic from that (LEDs and 100n omitted):
 
 ![Sound sensor schematic around an LM393](./docs/sound%20sensor%20schematic%20export.png)
 
-It's basically just an amplifier for the mic and the comparator *compares* that voltage to the reference voltage level set by the potentiometer.
-The output (`OUT`) signal is driven low when sound is detected, otherwise it's driven high.
+It's basically just an amplifier for the electret microphone and the comparator *compares* that amplified voltage to the reference voltage level set by the potentiometer.
+The output (`OUT`) signal is driven low when suffiently loud sound is detected, otherwise it's driven high.
+The green LED near the output lights when `OUT` is low. (The other LED is just always on and I removed it later to save power.)
 
 ## Building the Software
 
