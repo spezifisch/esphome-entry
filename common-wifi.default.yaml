@@ -1,0 +1,8 @@
+Connect to configured default AP
+---
+ssid: !secret wifi_ssid
+password: !secret wifi_password
+# Enable fallback hotspot (captive portal) in case wifi connection fails
+ap:
+  ssid: !secret fallback_ssid
+  password: !secret fallback_password
