@@ -1743,7 +1743,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 125.73) (xy 158.75 123.19)
+			(xy 158.75 128.27) (xy 158.75 123.19)
 		)
 		(stroke
 			(width 0)
@@ -1783,17 +1783,17 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 119.38) (xy 162.56 119.38)
+			(xy 163.83 119.38) (xy 162.56 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "67e2b8fa-4a59-4ad9-9349-0d330898e00f")
+		(uuid "6a265c12-5680-4ad8-b3ba-770a82ebdcd0")
 	)
 	(wire
 		(pts
-			(xy 167.64 109.22) (xy 170.18 109.22)
+			(xy 163.83 109.22) (xy 170.18 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1803,7 +1803,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 119.38) (xy 140.97 125.73)
+			(xy 140.97 119.38) (xy 140.97 128.27)
 		)
 		(stroke
 			(width 0)
@@ -2013,7 +2013,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 119.38) (xy 167.64 109.22)
+			(xy 163.83 109.22) (xy 163.83 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2111,6 +2111,153 @@
 		)
 		(uuid "fd83a13b-3e90-4a92-8883-83c3b86d5375")
 	)
+	(rectangle
+		(start 81.915 82.55)
+		(end 103.505 123.825)
+		(stroke
+			(width 0)
+			(type dash)
+			(color 72 72 72 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 2e3f4836-81ac-45fc-9df3-63beadecbf05)
+	)
+	(rectangle
+		(start 117.475 82.55)
+		(end 147.955 123.825)
+		(stroke
+			(width 0)
+			(type dash)
+			(color 72 72 72 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 32c01006-dbf7-4e56-8f36-c2e292ff3605)
+	)
+	(rectangle
+		(start 111.125 101.6)
+		(end 111.125 101.6)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid d179c9f8-beb5-4105-8401-16482fce88c3)
+	)
+	(rectangle
+		(start 107.95 101.6)
+		(end 116.84 115.57)
+		(stroke
+			(width 0)
+			(type dash)
+			(color 72 72 72 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid ff387311-7651-4440-91e4-d78b183c5332)
+	)
+	(text "by: spezifisch+ee@gmail.com\nLicense: CERN-OHL-S-2.0"
+		(exclude_from_sim no)
+		(at 255.778 179.324 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 132 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "05b76428-d9d0-4972-99cc-b258f7874539")
+	)
+	(text "Threshold voltage"
+		(exclude_from_sim no)
+		(at 162.306 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 72 72 72 1)
+			)
+			(justify left)
+		)
+		(uuid "0b94a80a-785c-4751-b55f-e89ea2c9b5e7")
+	)
+	(text "Sound Sensor Module"
+		(exclude_from_sim no)
+		(at 187.452 189.738 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+				(color 132 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "192925fe-20b9-4e6c-b2cb-8a770b91e82a")
+	)
+	(text "v1.0"
+		(exclude_from_sim no)
+		(at 268.478 193.294 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 132 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "273e0fa2-7547-4971-9a47-90c88f59cde4")
+	)
+	(text "OUT level:\n0V = sound detected\nVCC = no sound detected"
+		(exclude_from_sim no)
+		(at 198.12 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 72 72 72 1)
+			)
+			(justify left)
+		)
+		(uuid "50b7a477-145f-41a6-aafe-ce8f030f5d29")
+	)
+	(text "Bias voltage for the electret mic"
+		(exclude_from_sim no)
+		(at 81.534 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 72 72 72 1)
+			)
+			(justify left)
+		)
+		(uuid "51f53034-b73a-447e-9b59-bda61ce6672f")
+	)
+	(text "Common-emitter amplifier\n+ low-pass (R1+C2)"
+		(exclude_from_sim no)
+		(at 117.602 126.746 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 72 72 72 1)
+			)
+			(justify left)
+		)
+		(uuid "674fe412-c1c7-4760-961a-b21fac74489c")
+	)
+	(text "DC block"
+		(exclude_from_sim no)
+		(at 107.95 117.348 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 72 72 72 1)
+			)
+			(justify left)
+		)
+		(uuid "7af24815-a57c-4c1e-bbd9-18c6ce877d0d")
+	)
 	(label "OUT"
 		(at 198.12 106.68 0)
 		(fields_autoplaced yes)
@@ -2121,6 +2268,17 @@
 			(justify left bottom)
 		)
 		(uuid "3492877f-5ac8-4cbf-9e79-09afd22236cb")
+	)
+	(label "VREF"
+		(at 163.83 109.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "935cccd9-cfdb-4253-84a8-a66b7cec7b88")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -2331,7 +2489,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 140.97 125.73 0)
+		(at 140.97 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2340,7 +2498,7 @@
 		(fields_autoplaced yes)
 		(uuid "2cbfa3a0-d77b-46a4-bbbf-58ff78767709")
 		(property "Reference" "#PWR07"
-			(at 140.97 132.08 0)
+			(at 140.97 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2349,7 +2507,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 140.97 130.81 0)
+			(at 140.97 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2357,7 +2515,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 140.97 125.73 0)
+			(at 140.97 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2366,7 +2524,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 140.97 125.73 0)
+			(at 140.97 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2375,7 +2533,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 140.97 125.73 0)
+			(at 140.97 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3252,28 +3410,28 @@
 			)
 		)
 		(pin "2"
-			(uuid "3ef0ce0f-7227-4241-bb5c-2f3e0e6b7d29")
+			(uuid "3ef0ce0f-7227-4241-bb5c-2f3e0e6b7d2a")
 		)
 		(pin "1"
-			(uuid "8278c116-28c9-42ad-9c0d-52be9014bcb2")
+			(uuid "8278c116-28c9-42ad-9c0d-52be9014bcb3")
 		)
 		(pin "6"
-			(uuid "cd5bd808-7077-4df3-876f-53477b546669")
+			(uuid "cd5bd808-7077-4df3-876f-53477b54666a")
 		)
 		(pin "4"
-			(uuid "277528b3-56d4-4a96-ab65-9fafa56986e9")
+			(uuid "277528b3-56d4-4a96-ab65-9fafa56986ea")
 		)
 		(pin "7"
-			(uuid "b6c177c5-3a6c-43fc-9f3d-6e5227ac3d9e")
+			(uuid "b6c177c5-3a6c-43fc-9f3d-6e5227ac3d9f")
 		)
 		(pin "5"
-			(uuid "b54816db-9a3b-4b46-8f83-4666833333e7")
+			(uuid "b54816db-9a3b-4b46-8f83-4666833333e8")
 		)
 		(pin "3"
-			(uuid "c8e16802-6b05-4dae-98e4-19ca514d2cab")
+			(uuid "c8e16802-6b05-4dae-98e4-19ca514d2cac")
 		)
 		(pin "8"
-			(uuid "19094fd9-d2ce-4991-b8f8-5a7994a2ae3f")
+			(uuid "19094fd9-d2ce-4991-b8f8-5a7994a2ae40")
 		)
 		(instances
 			(project ""
@@ -3359,7 +3517,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 158.75 125.73 0)
+		(at 158.75 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3368,7 +3526,7 @@
 		(fields_autoplaced yes)
 		(uuid "bb6870de-15c2-4299-ba75-8e593ff38a48")
 		(property "Reference" "#PWR01"
-			(at 158.75 132.08 0)
+			(at 158.75 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3377,7 +3535,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.75 130.81 0)
+			(at 158.75 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3385,7 +3543,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 158.75 125.73 0)
+			(at 158.75 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3394,7 +3552,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 125.73 0)
+			(at 158.75 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3403,7 +3561,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 158.75 125.73 0)
+			(at 158.75 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
