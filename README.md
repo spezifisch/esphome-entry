@@ -63,6 +63,8 @@ For initial configuration, you can use the fallback WiFi AP, improv_serial, or j
 
 You can connect to the fallback AP configured in `secrets.yaml` and set your proper WiFi credentials using the Web UI at port 80 of the gateway IP that you get via DHCP when connecting.
 
+**NOTE**: For prebuilt GitHub releases this feature is *deactivated*, or we would need to include a default password. Since ESPHome's `captive_portal` component seems to be triggered everytime the default WiFi connection is lost, I guess this would be otherwise insecure.
+
 ### HomeAssistant
 
 This is plug & play with ESPHome's HomeAssistant integration. If the sensor is not auto-detected, just lookup its IP (e.g. from your router) and configure it manually.
