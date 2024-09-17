@@ -1,4 +1,6 @@
 name: esphome-build
+permissions:
+  contents: write
 on:
   push:
     branches: main
