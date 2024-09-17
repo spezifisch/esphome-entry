@@ -1,5 +1,4 @@
-Wifi config for user builds. Enable only fallback hotspot (captive portal).
----
+# Wifi config for user builds. Enable only fallback hotspot (captive portal).
 ap:
   ssid: !secret fallback_ssid
   password: !secret fallback_password
