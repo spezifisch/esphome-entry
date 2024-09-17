@@ -1,0 +1,20 @@
+name: esphome-build
+on:
+  push:
+  workflow_dispatch:
+  
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ESPHome Builder
+        uses: esphome/build-action@v4.0.3
+        with:
+          yaml-file: esphome.yaml
+          release-url: "https://github.com/spezifisch/esphome-entry"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: esphome-build-output
+          path: esphome*/*
+          
