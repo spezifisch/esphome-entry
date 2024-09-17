@@ -6,6 +6,8 @@ A custom box to:
 * trigger a visual doorbell
 * integrate with HomeAssistant
 
+(*You can also use the Status LED of the ESP32 board as a proper light in HomeAssistant in case you want to use it as a notification or something.*)
+
 ## Building the Hardware
 
 ### Schematic
@@ -14,7 +16,7 @@ A custom box to:
 
 * The idea here is that we use the sound detector to trigger an event for HomeAssistant when it's loud enough (our primary audible doorbell rings)
 * This also triggers the remote of a secondary (visual) doorbell (a cheap wireless doorbell set with two LED units/wall warts)
-* The remote runs from a 12 V battery (A23), therefore the optocoupler instead of hooking us directly into it
+* The remote runs from a 12 V battery (A23), therefore the optocoupler instead of hooking us directly into it. The optocoupler's output is just connected to the two sides of the push button of the remote.
 * Our ESP32 and sound sensor are powered by the ESP32 board's 3.3 V regulator. That regulator is powered by 5 V from the USB-C port.
 
 ### Sound Sensor
@@ -81,3 +83,9 @@ $ pre-commit run --all-files
 ## Troubleshooting
 
 * If your doorbell remote isn't triggered reliably, play with the `switch.on_turn_on` delay parameter to vary how long the button is "pressed".
+
+## License
+
+Schematics: CERN-OHL-S-2.0
+
+Everything else (except .pdfs): GPL-3.0-only
