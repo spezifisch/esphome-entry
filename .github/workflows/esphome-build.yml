@@ -4,10 +4,12 @@ on:
   workflow_dispatch:
   
 jobs:
-  check-bats-version:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Create annotation for build error
+        run: cp secrets{.example,}.yaml
       - name: ESPHome Builder
         uses: esphome/build-action@v4.0.3
         with:
@@ -17,4 +19,13 @@ jobs:
         with:
           name: esphome-build-output
           path: esphome*/*
-          
+
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v4.1.8
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: esp-build-output/*
