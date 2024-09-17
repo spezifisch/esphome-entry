@@ -13,12 +13,12 @@ jobs:
       - name: ESPHome Builder
         uses: esphome/build-action@v4.0.3
         with:
-          yaml-file: esphome.yaml
+          yaml-file: github-build.yaml
           release-url: "https://github.com/spezifisch/esphome-entry"
       - uses: actions/upload-artifact@v4
         with:
           name: esphome-build-output
-          path: esphome*/*
+          path: github-build*/*
 
   release:
     runs-on: ubuntu-latest
