@@ -25,7 +25,7 @@ We're using one of these sound sensors which use an LM393 comparator for thresho
 
 ![PCB layout of the sound sensors](./docs/sound%20sensor.png)
 
-Reverse-engineered schematic from that (LEDs and 100n omitted):
+Reverse-engineered schematic from that (LEDs and supply omitted):
 
 ![Sound sensor schematic around an LM393](./docs/sound%20sensor%20schematic%20export.png)
 
